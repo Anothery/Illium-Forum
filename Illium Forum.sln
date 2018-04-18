@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Illium Forum", "Illium Forum\Illium Forum.csproj", "{4B0300DB-C6AF-4B30-A3F2-30237EC47A87}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{C7799533-2ECC-4248-A339-097F470E6581}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4B0300DB-C6AF-4B30-A3F2-30237EC47A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B0300DB-C6AF-4B30-A3F2-30237EC47A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B0300DB-C6AF-4B30-A3F2-30237EC47A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7799533-2ECC-4248-A339-097F470E6581}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7799533-2ECC-4248-A339-097F470E6581}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7799533-2ECC-4248-A339-097F470E6581}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7799533-2ECC-4248-A339-097F470E6581}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

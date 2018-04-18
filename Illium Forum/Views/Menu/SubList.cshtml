@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Domain.Content.Subject>
+@{
+    Layout = null;
+}
+
+
+<ul class="sublist">
+
+    @foreach (var item in Model)
+    {
+        <li><a href="@Url.Action("Index", "Subject", new {subName = item.Code})">@item.Name</a></li>
+    }
+
+</ul>

@@ -1,0 +1,56 @@
+﻿@model Domain.Content.Subject
+
+@{
+    ViewBag.Title = Model.Name;
+}
+
+
+<div class="container">
+
+
+        <div class="board-banner no-banner">
+            <div class="board-name">@Model.Name</div>
+    </div>
+    <div class="thread">
+        <ul class="thread-info-wrapper">
+            <li class="thread-number">№1234</li>
+            <li>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <a>Sudzusama</a>
+            </li>
+            <li>
+                <time class="timeago" datetime="2017-12-17T09:24:17Z"></time>
+            </li> 
+        </ul>
+        <div class="thread-wrapper">
+            <div class="unvoted-block">
+                <a class="fa fa-angle-up fa-3x" aria-hidden="true"></a>
+                <div class="votecount row">2.2k</div>
+                <a class="fa fa-angle-down fa-3x" aria-hidden="true"></a>
+            </div>
+            <img class="thread-picture rounded" src="../Content/Static/board-banner.jpg" alt="" />
+            <div class="thread-text">
+                <span class="thread-caption">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </span>
+                <ul class="thread-second-info">
+                        <li>
+                            <a>55 комментариев</a>
+                        </li>
+                        <li>
+                            <a>Пожаловаться</a>
+                        </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="thread"></div>
+    <div class="thread"></div>
+    <div class="thread"></div>
+    <div class="thread"></div>
+    <div class="thread"></div>
+    <div class="thread"></div>
+    <div class="thread"></div>
+</div>
+
+
+
+

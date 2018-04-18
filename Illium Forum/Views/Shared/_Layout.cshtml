@@ -1,16 +1,20 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title – приложение ASP.NET</title>
+    <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+
+    <div class="navbar-boards">
+        @{Html.RenderAction("SubList", "Menu");}
+    </div>
+    <div class="navbar navbar-main">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -18,28 +22,49 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="logo">
+                    @Html.ActionLink("illium", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
-                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
-                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                <ul class="nav navbar-nav navbar-left">
+                    <li>@Html.ActionLink("Горячее", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Свежее", "New", "Home")</li>
+                    <li>@Html.ActionLink("Лучшее", "Top", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="login-button">
+                        <a href="@Url.Action("Index", "Home")">
+                            <span class="fa fa-home" aria-hidden="true"></span>
+                            Вход
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
+
+
+    <div class="body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year – приложение ASP.NET</p>
-        </footer>
+
+
     </div>
+    <footer>
+        <p>&copy; @DateTime.Now.Year – Illium Inc.</p>
+    </footer>
 
     @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/Scripts/jquery.timeago.js")
+    @Scripts.Render("~/Scripts/jquery.timeago.ru.js")
     @Scripts.Render("~/bundles/bootstrap")
+    <script src="https://use.fontawesome.com/f62a9a3670.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            $("time.timeago").timeago();
+        });
+    </script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
+
