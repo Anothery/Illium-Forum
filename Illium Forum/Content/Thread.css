@@ -1,0 +1,106 @@
+﻿
+.container {
+    max-width: 1050px;
+}
+
+
+
+.thread-container {
+    padding-top: 5px;
+}
+
+.thread {
+    background: #24262d;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.thread-wrapper {
+    padding-top: 2px;
+    padding-bottom: 4px;
+}
+
+.thread-info-bar {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #1c1f26;
+    margin-bottom: 4px;
+}
+
+.left-side-info {
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.right-side-info {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.left-side-info > div {
+    padding-right: 10px;
+}
+
+.right-side-info > div {
+    padding-right: 10px;
+}
+
+.thread-info-bar a {
+    color: #9a64bd;
+}
+
+.thread-main-bar {
+    display: flex;
+    align-content: flex-start;
+}
+
+.unvoted-block {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    width: 55px;
+    align-items: center;
+    padding-top: 15px;
+}
+
+    .unvoted-block a {
+        font-size: 22px;
+    }
+
+.votecount {
+    font-size: 15px;
+}
+
+.thread-picture {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.thread-text {
+    padding: 0 5px 5px 10px;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.thread-caption {
+    margin: 0;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.thread-second-info {
+    height: 25%;
+    overflow: hidden;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+    .thread-second-info li {
+        padding-right: 10px;
+        display: inline-block;
+        color: #9a64bd;
+        list-style-type: none;
+    }

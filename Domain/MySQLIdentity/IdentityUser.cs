@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNet.Identity;
+﻿using Domain.Content;
+using Microsoft.AspNet.Identity;
 using System;
+using System.Collections.Generic;
 
 namespace Domain.MySQLIdentity
 {

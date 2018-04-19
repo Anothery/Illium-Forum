@@ -1,0 +1,22 @@
+﻿.board-banner {
+    height: 150px;
+    border-radius: 3px;
+}
+
+    .board-banner.no-banner {
+        height: 85px;
+        background-color: inherit;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.board-name {
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: middle;
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    padding: 0 20px;
+    /*     border: solid 1px #9a64bd;*/
+}

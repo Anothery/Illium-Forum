@@ -1,0 +1,112 @@
+﻿
+.navbar-boards {
+    min-height: 20px;
+}
+
+.navbar-main {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.sublist {
+    width: 100%;
+    text-align: center;
+    background-color: #9a64bd;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 20px;
+}
+
+    .sublist > li {
+        padding-left: 5px;
+        padding-right: 5px;
+        float: none;
+        display: inline-block;
+    }
+
+        .sublist > li a {
+            font-family: 'Open Sans', serif;
+            font-size: 13px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top: 11px !important;
+    padding-bottom: 0 !important;
+    height: 40px;
+}
+
+.navbar {
+    min-height: 40px;
+    background-color: #13171f;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    color: #fff;
+    border: none;
+}
+
+ul.nav a:hover {
+    background-color: transparent;
+}
+
+.nav a {
+    color: #fff;
+}
+
+.nav.container-fluid > .nav a:hover {
+    -moz-animation: button-selected 0.3s linear forwards;
+    -webkit-animation: button-selected 0.3s linear forwards;
+    animation: button-selected 0.3s linear forwards;
+}
+
+.nav.container-fluid > .nav a:focus {
+    background-color: inherit;
+}
+
+@keyframes button-selected {
+    100% {
+        background-color: #010712;
+    }
+}
+
+
+.navbar-brand {
+    margin-right: 30px;
+    font-family: 'AFCarplates Medium';
+    font-size: 22px;
+    color: #fff;
+    color: #6e49c4;
+    float: left;
+}
+
+
+.navbar-brand, .navbar-brand-extended {
+    animation: neon 5s ease-in-out infinite;
+    -moz-animation: neon 5s ease-in-out infinite;
+    -webkit-animation: neon 5s ease-in-out infinite;
+}
+
+.nav.navbar-right{
+}
+.nav.container-fluid {
+    width: 100%;
+}
+
+.nav ul .login-button {
+    float: left;
+}
+
+
+@keyframes neon {
+    0%, 100% {
+        text-shadow: 0 0 3px #6e49c4, 0 0 6px #6e49c4, 0 0 15px #7954d0, 0 0 15px #7954d0, 0 0 8px #9c79ef, 0 0 3px #4a2899;
+        color: #f992fb;
+    }
+
+    50% {
+        text-shadow: 0 0 .5vw #362465, 0 0 1.5vw #362465, 0 0 5vw #362465, 0 0 5vw #362465, 0 0 .2vw #362465, 0 0 .1vw #362465;
+        color: #f992fb;
+    }
+}

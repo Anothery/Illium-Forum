@@ -49,9 +49,8 @@ namespace Illium_Forum.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Адрес электронной почты")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "Имя")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +63,10 @@ namespace Illium_Forum.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "Имя")]
+        public string Username { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Адрес электронной почты")]

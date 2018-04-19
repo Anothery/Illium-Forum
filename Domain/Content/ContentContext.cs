@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using Domain.MySQLIdentity;
+using System.Data.Entity;
 
 namespace Domain.Content
 {

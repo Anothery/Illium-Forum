@@ -1,0 +1,85 @@
+﻿
+.login-wrapper {
+    text-align: center;
+    padding-top: 25px;
+    font-family: 'Roboto Slab';
+}
+
+.navbar-brand-extended {
+    font-size: 35px;
+    color: #fff;
+    color: #6e49c4;
+}
+.navbar-brand-extended {
+    animation: neon 5s ease-in-out infinite;
+    -moz-animation: neon 5s ease-in-out infinite;
+    -webkit-animation: neon 5s ease-in-out infinite;
+}
+
+.login-title {
+    padding-top: 55px;
+    padding-bottom: 25px;
+    font-family: 'Roboto Slab';
+    font-size: 25px;
+}
+.login-label {
+    font-weight: normal;
+    font-family: 'Roboto Slab';
+    font-size: 15px;
+}
+
+.login-textbox {
+    margin: 0 auto;
+    display: block;
+    width: 222px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #1c1f26;
+    outline: none;
+}
+
+
+
+/* Create a custom checkbox */
+.checkmark {
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+}
+
+.login-button {
+    padding: 5px 45px 5px 45px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #1c1f26;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Roboto Slab';
+    font-size: 15px;
+}
+.register-button {
+    margin-top: 10px;
+    padding: 5px 32px 5px 32px;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    background-color: #1c1f26;
+    color: #fff;
+    font-weight: normal;
+    font-family: 'Roboto Slab';
+    font-size: 15px;
+}
+
+.login-wrapper.text-danger{
+    display: block;
+    text-align: center;
+}
+
+.validation-summary-errors ul{
+    padding: 0;
+}
+.validation-summary-errors li{
+    display:block;
+    list-style-type: none;
+}
