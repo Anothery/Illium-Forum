@@ -13,9 +13,16 @@ namespace Domain.Content
     {
         [Key]
         public int SubId { get; set; }
+        [Required]
         public string Name { get; set; }
+        [Required]
         public string Code { get; set; }
 
         public ICollection<Thread> Threads { get; set; }
+
+        public Subject()
+        {
+            Threads = new List<Thread>();
+        }
     }
 }

@@ -10,6 +10,7 @@
 }
 
 .thread {
+    margin-bottom: 2px;
     background: #24262d;
     width: 100%;
     border-radius: 3px;
@@ -25,11 +26,12 @@
     display: flex;
     justify-content: space-between;
     padding-bottom: 2px;
-    border-bottom: 2px solid #1c1f26;
+ 
     margin-bottom: 4px;
 }
 
 .left-side-info {
+    color: #aaabbb;
     padding-left: 10px;
     display: flex;
     justify-content: flex-start;
@@ -55,6 +57,7 @@
 .thread-main-bar {
     display: flex;
     align-content: flex-start;
+    min-height: 105px;
 }
 
 .unvoted-block {
@@ -64,6 +67,7 @@
     width: 55px;
     align-items: center;
     padding-top: 15px;
+    padding-bottom: 15px;
 }
 
     .unvoted-block a {
@@ -77,10 +81,12 @@
 .thread-picture {
     max-width: 100px;
     max-height: 100px;
+    margin-right: 10px;
 }
 
 .thread-text {
-    padding: 0 5px 5px 10px;
+    margin: -3px 0;
+    padding: 0 10px 0 0;
     align-items: flex-start;
     flex: 1;
 }
@@ -88,10 +94,10 @@
 .thread-caption {
     margin: 0;
     display: inline-block;
-    overflow: hidden;
+   
 }
 
-.thread-second-info {
+second-info {
     height: 25%;
     overflow: hidden;
     margin-bottom: 0;
@@ -104,3 +110,7 @@
         color: #9a64bd;
         list-style-type: none;
     }
+
+.thread-more {
+    color: #9a64bd;
+}

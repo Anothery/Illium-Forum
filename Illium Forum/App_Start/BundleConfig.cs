@@ -22,9 +22,12 @@ namespace Illium_Forum
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
                       "~/Scripts/respond.js"));
-            bundles.Add(new ScriptBundle("~/bundles/timeago").Include(
+            bundles.Add(new ScriptBundle("~/bundles/mainbundle").Include(
                    "~/Scripts/jquery.timeago.js",
-                   "~/Scripts/jquery.timeago.ru.js"));
+                   "~/Scripts/jquery.timeago.ru.js",
+                   "~/Scripts/moment-with-locales.js",
+                    "~/Scripts/readmore.min.js",
+                    "~/Scripts/main.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

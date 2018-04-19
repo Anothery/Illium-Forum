@@ -1,24 +1,25 @@
-﻿@model Domain.Content.Thread
+﻿@using Illium_Forum.Models
+@model ThreadViewModel
 
 <div class="thread">
     <div class="thread-wrapper">
         <div class="thread-info-bar row-fluid">
             <div class="left-side-info">
-                <div class="thread-number">№1234</div>
-                <div class="">
+                <div class="thread-number">№@Model.ThreadId</div>
+                <div class="thread-user">
                     <a>
                         <span class="glyphicon glyphicon-user"></span>
-                        @ViewData["Username"]
+                        @Model.UserName
                     </a>
                 </div>
-                <div class="">
-                    <time class="timeago" datetime="@Model.Date"></time>
+                <div>
+                    <time class="thread-time" datetime="@Model.Date"></time>
                 </div>
             </div>
             <div class="right-side-info">
                 <div class="thread-post-count">
                     <a>
-                        @ViewData["Postcount"]
+                        @Model.Postcount
                         <span class="glyphicon glyphicon-comment"></span>
                     </a>
                 </div>
@@ -27,12 +28,12 @@
         <div class="thread-main-bar row-fluid">
             <div class="unvoted-block">
                 <a class="glyphicon glyphicon-menu-up"></a>
-                <div class="votecount">2.2k</div>
+                <div class="votecount">@Model.Votecount</div>
                 <a class="glyphicon glyphicon-menu-down"></a>
             </div>
-            <img class="thread-picture" src="../Content/Static/board-banner.jpg" alt="" />
+            <img class="thread-picture" src="@Model.ImagePath" alt="" />
             <div class="thread-text">
-                <p class="thread-caption">@Model.Text</p>
+                <article>@Model.Text</article>
 
             </div>
         </div>

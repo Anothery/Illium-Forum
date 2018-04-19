@@ -8,7 +8,6 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-
 </head>
 <body>
 
@@ -71,12 +70,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
-    @Scripts.Render("~/bundles/timeago")
-    <script type="text/javascript">
-        jQuery(document).ready(function () {
-            $("time.timeago").timeago();
-        });
-    </script>
+    @Scripts.Render("~/bundles/mainbundle")
     @RenderSection("scripts", required: false)
 </body>
 </html>
