@@ -15,7 +15,8 @@
     margin: 0 auto;
     text-align: center;
     vertical-align: middle;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Roboto', serif;
+    font-weight: 300;
     font-size: 25px;
     padding: 0 20px;
     /*     border: solid 1px #9a64bd;*/

@@ -1,7 +1,7 @@
-﻿@import url('https://fonts.googleapis.com/css?family=Roboto');
+﻿@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab:300,400&subset=cyrillic');
 @import "Header.css";
 @import "Subject.css";
 @import "Thread.css";
@@ -37,7 +37,8 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    min-height: 90vh;
+
+    overflow: hidden;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

@@ -2,13 +2,16 @@
 .login-wrapper {
     text-align: center;
     padding-top: 25px;
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto';
+    font-weight: 300;
 }
 
 .navbar-brand-extended {
     font-size: 35px;
     color: #fff;
     color: #6e49c4;
+    font-family: 'Roboto Slab';
+    font-weight: 300;
 }
 .navbar-brand-extended {
     animation: neon 5s ease-in-out infinite;
@@ -19,13 +22,12 @@
 .login-title {
     padding-top: 55px;
     padding-bottom: 25px;
-    font-family: 'Roboto Slab';
     font-size: 25px;
 }
 .login-label {
-    font-weight: normal;
-    font-family: 'Roboto Slab';
+    font-weight: 300;
     font-size: 15px;
+
 }
 
 .login-textbox {
@@ -42,21 +44,32 @@
 
 
 
-/* Create a custom checkbox */
 .checkmark {
     height: 15px;
     width: 15px;
     background-color: #fff;
 }
+.login-checkbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+.login-checkbox input[type="checkbox"], .login-checkbox label {
+    margin: 0;
+}
 
+ .login-checkbox label{
+     padding-left: 5px;
+ }
 .login-button {
     padding: 5px 45px 5px 45px;
     border-radius: 5px;
     border: 1px solid #fff;
     background-color: #1c1f26;
     color: #fff;
-    font-weight: normal;
-    font-family: 'Roboto Slab';
+    font-weight: 300;
     font-size: 15px;
 }
 .register-button {
@@ -66,8 +79,6 @@
     border: 1px solid #fff;
     background-color: #1c1f26;
     color: #fff;
-    font-weight: normal;
-    font-family: 'Roboto Slab';
     font-size: 15px;
 }
 
