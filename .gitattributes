@@ -61,5 +61,4 @@
 #*.PDF   diff=astextplain
 #*.rtf   diff=astextplain
 #*.RTF   diff=astextplain
-$ cat .gitattributes
-*.rb linguist-language=Java
+*.js linguist-language=C#
