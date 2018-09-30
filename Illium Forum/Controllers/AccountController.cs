@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Illium_Forum.Models;
+using Domain.MySQLIdentity;
 
 namespace Illium_Forum.Controllers
 {
@@ -392,7 +393,8 @@ namespace Illium_Forum.Controllers
         public ActionResult LogOff()
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
-            return RedirectToAction("Index", "Home");
+
+           return  Redirect(Request.UrlReferrer.ToString());
         }
 
         //

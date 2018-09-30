@@ -37,8 +37,12 @@ a, a:hover, a:active, a:visited, a:focus {
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-
+    min-height: 85vh;
     overflow: hidden;
+}
+
+.empty{
+
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

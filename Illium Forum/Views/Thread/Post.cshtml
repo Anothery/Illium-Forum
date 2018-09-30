@@ -1,0 +1,26 @@
+﻿@model Illium_Forum.Models.PostViewModel
+
+<div class="thread">
+    <div class="thread-wrapper">
+        <div class="thread-info-bar row-fluid">
+            <div class="left-side-info">
+                <div class="username">
+                    <a>
+                        <span class="glyphicon glyphicon-user"></span>
+                        @Model.Username
+                    </a>
+                </div>
+                <div class="datetime">
+                     <time class="timeago" datetime="@Model.Date.ToString("yyyy-MM-ddTHH:mm:ssZ")"></time>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="thread-main-bar row-fluid">
+            <div class="thread-text">
+                <p class="thread-caption">@Model.Text</p>
+            </div>
+        </div>
+    </div>
+</div>

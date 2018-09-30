@@ -1,0 +1,20 @@
+﻿@model Illium_Forum.Models.SubjectViewModel
+
+@{
+    ViewBag.Title = "Свежее";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="board-banner no-banner">
+        <div class="board-name">Свежее</div>
+    </div>
+    <div class="thread-container">
+        @foreach (var thread in Model.threads)
+        {
+            Html.RenderAction("Thread", "Subject", thread);
+        }
+    </div>
+</div>
+
+

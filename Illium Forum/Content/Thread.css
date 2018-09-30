@@ -6,7 +6,11 @@
 
 
 .thread-container {
-    padding-top: 5px;
+    padding-top: 15px;
+}
+
+.post-container {
+    padding-top: 15px;
 }
 
 .thread {
@@ -14,7 +18,9 @@
     width: 100%;
     border-radius: 3px;
     overflow: hidden;
+    margin-bottom: 12px;
 }
+
 
 .thread-wrapper {
     padding-top: 2px;
@@ -29,10 +35,26 @@
     margin-bottom: 4px;
 }
 
+.thread-header-text {
+    font-family: 'Open Sans';
+    font-weight: bold;
+    padding-right: 15px;
+}
+
+.thread-header-bar {
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 2px;
+    border-bottom: 2px solid #1c1f26;
+    margin-bottom: 4px;
+}
+
 .left-side-info {
     padding-left: 10px;
     display: flex;
     justify-content: flex-start;
+    /*display: grid;
+    grid-template-columns: 35px 120px 150px;*/
 }
 
 .right-side-info {
@@ -80,7 +102,7 @@
 }
 
 .thread-text {
-    padding: 0 5px 5px 10px;
+    padding: 10px 5px 10px 10px;
     align-items: flex-start;
     flex: 1;
 }
@@ -89,6 +111,7 @@
     margin: 0;
     display: inline-block;
     overflow: hidden;
+    white-space: pre-wrap;
 }
 
 .thread-second-info {
@@ -104,3 +127,30 @@
         color: #9a64bd;
         list-style-type: none;
     }
+
+.insert-post-wrapper {
+    font-family: 'Roboto', serif;
+    font-weight: 200;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.insert-post {
+    padding: 15px 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .insert-post p {
+        font-family: 'Roboto', serif;
+        font-weight: 200;
+        font-size: 15px;
+        padding-left: 5px;
+        margin: 0;
+    }
+
+.inside-thread {
+    padding-top: 20px;
+}

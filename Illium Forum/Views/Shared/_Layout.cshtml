@@ -24,18 +24,16 @@
             </div>
             <div class="nav container-fluid">
                 <ul class="nav navbar-nav navbar-left">
-                    <li>@Html.ActionLink("Горячее", "Index", "Home")</li>
                     <li>@Html.ActionLink("Свежее", "New", "Home")</li>
-                    <li>@Html.ActionLink("Лучшее", "Top", "Home")</li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     @if (Request.IsAuthenticated)
                     {
-                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "nav navbar-nav" }))
+                        using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { ReturnUrl = @Request.QueryString["ReturnUrl"], id = "logoutForm", @class = "nav navbar-nav" }))
                         {
                          @Html.AntiForgeryToken()
                         <li>
-                            <a title="Manage" href="@Url.Action("Index", "Manage", routeValues: null)">
+                            <a title="Manage" href=""> <!--@Url.Action("Index", "Manage", routeValues: null)-->
                                 <span class="glyphicon glyphicon-user"></span> @User.Identity.GetUserName()
                             </a>
                         </li>
@@ -50,7 +48,7 @@
                     else
                     {
                     <li>
-                        <a href="@Url.Action("Login", "Account")">
+                        <a href="@Url.Action("Login", "Account", new { returnUrl = Request.RawUrl })">
                             <span class="glyphicon glyphicon-home"></span>
                             Вход
                         </a>
@@ -73,8 +71,10 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/bundles/timeago")
     <script type="text/javascript">
-        jQuery(document).ready(function () {
-            $("time.timeago").timeago();
+        $('.timeago').each(function (i, obj) {
+            moment.locale('ru');
+            $(this).text(moment($(this).attr("datetime"), "YYYYMMDDHHmmss").fromNow());
+          //  $(this).text($(this).attr("datetime"));
         });
     </script>
     @RenderSection("scripts", required: false)

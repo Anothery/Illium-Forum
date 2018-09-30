@@ -1,0 +1,73 @@
+﻿@using Illium_Forum.Models
+@model Illium_Forum.Models.InsideThreadViewModel
+@{
+    ViewBag.Title = Model.thread.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="thread-container">
+        <div class="inside-thread">
+            <div class="thread">
+                <div class="thread-wrapper">
+                    <div class="thread-info-bar row-fluid">
+                        <div class="left-side-info">
+                            <div class="thread-header-text">@Model.thread.Name</div>
+                            <!--<div class="thread-number">№@Model.thread.ThreadId</div>-->
+                            <div class="username">
+                                <a>
+                                    <span class="glyphicon glyphicon-user"></span>
+                                    @Model.thread.Username
+                                </a>
+                            </div>
+                            <div class="datetime">
+                                <time class="timeago" datetime="@Model.thread.Date.ToString("yyyy-MM-ddTHH:mm:ssZ")"></time>
+                            </div>
+                        </div>
+                        <div class="right-side-info">
+                        </div>
+                    </div>
+                    <!-- <div class="thread-header-bar row-fluid">
+
+            </div>-->
+                    <div class="thread-main-bar row-fluid">
+                        <!-- <div class="unvoted-block">
+                    <a class="glyphicon glyphicon-menu-up"></a>
+                    <div class="votecount">2.2k</div>
+                    <a class="glyphicon glyphicon-menu-down"></a>
+                </div>
+                <!--<img class="thread-picture" src="../Content/Static/board-banner.jpg" alt="" />-->
+                        <div class="thread-text">
+                            <p class="thread-caption">@Model.thread.Text</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+    <div class="post-container">
+        @if (Model.posts != null)
+        {
+            foreach (var post in Model.posts)
+            {
+                Html.RenderAction("Post", "Thread", post);
+            }
+        }
+    </div>
+    @if (Request.IsAuthenticated)
+    {
+        <div class="insert-post">
+
+            <p>< Добавить сообщение ></p>
+        </div>
+
+
+        Html.RenderPartial("~/Views/Thread/InsertPost.cshtml", new InsertPostViewModel { threadId = Model.thread.ThreadId });
+    }
+
+</div>
+

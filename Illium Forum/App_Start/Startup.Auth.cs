@@ -5,7 +5,7 @@ using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
-using Illium_Forum.Models;
+using Domain.MySQLIdentity;
 
 namespace Illium_Forum
 {

@@ -1,14 +1,16 @@
-﻿@model IEnumerable<Domain.Content.Subject>
+﻿@model IEnumerable<Domain.Content.Poco.Subject>
 @{
     Layout = null;
 }
 
 
 <ul class="sublist">
-
-    @foreach (var item in Model)
+    @if (Model != null)
     {
-        <li><a href="@Url.Action("Index", "Subject", new {subName = item.Code})">@item.Name</a></li>
+        foreach (var item in Model)
+        {
+        <li><a href="@Url.Action("Index", "Subject", new { subName = item.Code })">@item.Name</a></li>
+        }
     }
 
 </ul>

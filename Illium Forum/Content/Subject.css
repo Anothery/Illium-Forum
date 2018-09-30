@@ -9,10 +9,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
 
+
 .board-name {
-    margin: 0 auto;
+
+   justify-content: center;
     text-align: center;
     vertical-align: middle;
     font-family: 'Roboto', serif;
@@ -20,4 +23,61 @@
     font-size: 25px;
     padding: 0 20px;
     /*     border: solid 1px #9a64bd;*/
+
+}
+.insert-thread-wrapper {
+    font-family: 'Roboto', serif;
+    font-weight: 200;
+    font-size: 15px;
+
+    display: flex;
+    justify-content: center;
+
+}
+.insertForm {
+    width: 100%;
+    text-align: center;
+    /*border: solid 1px #FFF;*/
+    border-radius: 5px;
+
+}
+.insertForm .form-group{
+    margin-bottom: 0;
+}
+
+.insert-textbox {
+    box-sizing: padding-box;
+    overflow: hidden;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    border: 0;
+    color: black;
+    border-radius: 10px;
+    max-width: 100%;
+    width: 450px;
+    text-align: center;
+}
+
+
+.insert-thread-button {
+    margin-top: 10px;
+
+    border: solid 1px #FFF;
+    border-radius: 5px;
+    padding: 5px 30px 5px 30px;
+    background-color: inherit;
+}
+.insert-thread {
+    padding: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.insert-thread p{
+     font-family: 'Roboto', serif;
+    font-weight: 200;
+    font-size: 15px;
+    padding-left: 5px;
+    margin: 0;
 }

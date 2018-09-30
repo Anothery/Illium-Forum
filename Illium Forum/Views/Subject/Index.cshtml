@@ -1,55 +1,34 @@
-﻿@model Domain.Content.Subject
-
+﻿@using Illium_Forum.Models
+@model Illium_Forum.Models.SubjectViewModel
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.subject.Name;
 }
 
 
 <div class="container">
-        <div class="board-banner no-banner">
-        <div class="board-name">@Model.Name</div>
-    </div>
-    <div class="thread-container">
-        <div class="thread">
-            <div class="thread-wrapper">
-                <div class="thread-info-bar row-fluid">
-                    <div class="left-side-info">
-                        <div class="thread-number">№1234</div>
-                        <div class="">
-                            <a>
-                            <span class="glyphicon glyphicon-user"></span>
-                            Sudzusama</a>
-                        </div>
-                        <div class="">
-                            <time class="timeago" datetime="2017-12-17T09:24:17Z"></time>
-                        </div>
-                    </div>
-                    <div class="right-side-info">
-                        <div class="thread-post-count">
-                            <a>
-                                144 комментария
-                                <span class="glyphicon glyphicon-comment"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="thread-main-bar row-fluid">
-                    <div class="unvoted-block">
-                        <a class="glyphicon glyphicon-menu-up"></a>
-                        <div class="votecount">2.2k</div>
-                        <a class="glyphicon glyphicon-menu-down"></a>
-                    </div>
-                    <img class="thread-picture" src="../Content/Static/board-banner.jpg" alt="" />
-                    <div class="thread-text">
-                      <p class="thread-caption">type and scrambled it te the 1500s, when an unknown printer took a galley of type and scrambled it to make galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+    <div class="board-banner no-banner">
 
-                    </div>
-                </div>
-            </div>      
+        <div class="board-name">
+            @Model.subject.Name
         </div>
-        <div class="thread"></div>
-        <div class="thread"></div>
-        <div class="thread"></div>
+        <div class="empty"></div>
+    </div>
+
+    @if (Request.IsAuthenticated)
+    {
+        <a class="insert-thread" data-toggle="collapse" href="#insert-thread-form">
+
+            <p>< Создать тред ></p>
+        </a>
+
+
+        Html.RenderPartial("~/Views/Thread/InsertThread.cshtml", new InsertThreadViewModel { subId = Model.subject.SubId });
+    }
+    <div class="thread-container">
+        @foreach (var thread in Model.threads)
+        {
+            Html.RenderAction("Thread", "Subject", thread);
+        }
     </div>
 </div>
 

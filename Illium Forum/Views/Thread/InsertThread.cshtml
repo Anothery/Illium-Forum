@@ -1,0 +1,42 @@
+﻿@model Illium_Forum.Models.InsertThreadViewModel
+
+
+<div class="insert-thread-wrapper">
+
+    <section id="insert-thread-form" class="insertForm collapse">
+        @using (Html.BeginForm("InsertThread", "Thread", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.TextArea("threadName", new { @class = "insert-textbox", @placeholder = "Введите заголовок (необязательно)", @rows = 1})
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.TextArea("threadText", new { @class = "insert-textbox autoExpand", @placeholder = "Введите текст" })
+                </div>
+            </div>
+            <div class="form-group">
+
+                <div>
+                    @Html.Hidden("subId", Model.subId)
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <input type="submit" value="Создать" class="insert-thread-button" />
+                </div>
+            </div>
+            @* Включите, когда будет включено подтверждение учетной записи для функции сброса пароля
+            <p>
+                @Html.ActionLink("Забыли пароль?", "ForgotPassword")
+            </p>*@
+        }
+    </section>
+</div>

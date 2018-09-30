@@ -1,6 +1,9 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Domain.Content;
+using Domain.MySQLIdentity;
+using RestSharp;
+using System.Web;
 using System.Web.Mvc;
 
 namespace Illium_Forum.Util
@@ -11,8 +14,8 @@ namespace Illium_Forum.Util
         {
             var builder = new ContainerBuilder();
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
-            builder.RegisterType<MySQLContentRepository>().As<IContentRepository>();
-            builder.RegisterType<ContentContext>().InstancePerRequest();
+            builder.RegisterType<ApiClient>().InstancePerRequest();
+            builder.RegisterType<ApiContentRepository>().As<IContentRepository>();
 
             var container = builder.Build();
 

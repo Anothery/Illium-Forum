@@ -1,0 +1,29 @@
+﻿@model Illium_Forum.Models.InsertPostViewModel
+
+
+<div class="insert-post-wrapper">
+
+    <section class="insertForm">
+        @using (Html.BeginForm("InsertPost", "Thread", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="form-group">
+
+                <div>
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    @Html.TextArea("postText", new { @class = "insert-textbox autoExpand", @placeholder = "Введите текст" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    @Html.Hidden("threadId", Model.threadId)
+                </div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <input type="submit" value="Отправить" class="insert-thread-button" />
+                </div>
+            </div>
+        }
+    </section>
+</div>
+
